@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ISaMaterialLogIn_Example' do
+  pod 'ISaMaterialLogIn', :path => '../'
+
+  target 'ISaMaterialLogIn_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
