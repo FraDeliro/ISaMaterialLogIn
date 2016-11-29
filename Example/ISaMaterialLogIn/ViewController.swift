@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import ISaMaterialLogIn
 
-class ViewController: UIViewController {
-
+class ViewController: ISaLogInController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

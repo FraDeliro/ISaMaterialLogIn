@@ -1,0 +1,6 @@
+framework module ISaMaterialLogIn {
+  umbrella header "ISaMaterialLogIn-umbrella.h"
+
+  export *
+  module * { export * }
+}

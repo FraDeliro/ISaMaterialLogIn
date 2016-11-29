@@ -1,0 +1,28 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - ISaMaterialLogIn (0.1.0)
+  - Material (2.3.19):
+    - Material/Core (= 2.3.19)
+  - Material/Core (2.3.19)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase (= 2.1.4)
+  - ISaMaterialLogIn (from `../`)
+  - Material (~> 2.0)
+
+EXTERNAL SOURCES:
+  ISaMaterialLogIn:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  ISaMaterialLogIn: ea608f687ac7acf6923ca7e26d7bf99511b8c19c
+  Material: ad15e0b55e3a3c104195e8409afa199a430c2e6c
+
+PODFILE CHECKSUM: a7764ea8d00f6cdbb8653b6195a54cc009154bc5
+
+COCOAPODS: 1.1.1

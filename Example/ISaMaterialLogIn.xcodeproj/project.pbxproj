@@ -29,8 +29,9 @@
 
 /* Begin PBXFileReference section */
 		0CAE0AAEE0A8FEDD42B9B2CC /* Pods-ISaMaterialLogIn_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISaMaterialLogIn_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ISaMaterialLogIn_Tests/Pods-ISaMaterialLogIn_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		2A6A99D218E4059CCCDDA95A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		369B84C6B2044C65E426AB52 /* ISaMaterialLogIn.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ISaMaterialLogIn.podspec; path = ../ISaMaterialLogIn.podspec; sourceTree = "<group>"; };
+		136B2C861DEC2D8500F4374D /* ISaMaterialLogIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ISaMaterialLogIn.framework; path = "../../Library/Developer/Xcode/DerivedData/ISaMaterialLogIn-ayloxhvmmkkxpqbilakuxcqzwygj/Build/Products/Debug-iphonesimulator/ISaMaterialLogIn/ISaMaterialLogIn.framework"; sourceTree = "<group>"; };
+		2A6A99D218E4059CCCDDA95A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		369B84C6B2044C65E426AB52 /* ISaMaterialLogIn.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ISaMaterialLogIn.podspec; path = ../ISaMaterialLogIn.podspec; sourceTree = "<group>"; };
 		3C98BD7F45A3DE5B5174F613 /* Pods_ISaMaterialLogIn_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ISaMaterialLogIn_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6074AD1D5AD4050B94D6B5C8 /* Pods-ISaMaterialLogIn_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISaMaterialLogIn_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ISaMaterialLogIn_Example/Pods-ISaMaterialLogIn_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ISaMaterialLogIn_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISaMaterialLogIn_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,7 +46,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		8FEDA9610DF2DEF1E74B6104 /* Pods-ISaMaterialLogIn_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISaMaterialLogIn_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ISaMaterialLogIn_Example/Pods-ISaMaterialLogIn_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A76D67E9A3A63B8C68C416DB /* Pods_ISaMaterialLogIn_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ISaMaterialLogIn_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB50B13675DBAA331DF387A7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		AB50B13675DBAA331DF387A7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C2625D7B37628729B10A49B1 /* Pods-ISaMaterialLogIn_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISaMaterialLogIn_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ISaMaterialLogIn_Tests/Pods-ISaMaterialLogIn_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +154,7 @@
 		71AA53F2FE4ABBCCEB11BFA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				136B2C861DEC2D8500F4374D /* ISaMaterialLogIn.framework */,
 				A76D67E9A3A63B8C68C416DB /* Pods_ISaMaterialLogIn_Example.framework */,
 				3C98BD7F45A3DE5B5174F613 /* Pods_ISaMaterialLogIn_Tests.framework */,
 			);
@@ -210,14 +212,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = NQU669U9J9;
+						LastSwiftMigration = 0810;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = NQU669U9J9;
+						LastSwiftMigration = 0810;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -415,8 +421,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -460,8 +468,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -480,6 +490,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -488,12 +499,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8FEDA9610DF2DEF1E74B6104 /* Pods-ISaMaterialLogIn_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NQU669U9J9;
 				INFOPLIST_FILE = ISaMaterialLogIn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -501,12 +515,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6074AD1D5AD4050B94D6B5C8 /* Pods-ISaMaterialLogIn_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NQU669U9J9;
 				INFOPLIST_FILE = ISaMaterialLogIn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -514,6 +531,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C2625D7B37628729B10A49B1 /* Pods-ISaMaterialLogIn_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = NQU669U9J9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -526,6 +545,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -533,6 +553,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0CAE0AAEE0A8FEDD42B9B2CC /* Pods-ISaMaterialLogIn_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = NQU669U9J9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -541,6 +563,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
