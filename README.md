@@ -19,7 +19,7 @@ ISaMaterialLogIn is available through [CocoaPods](http://cocoapods.org). To inst
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "ISaMaterialLogIn", '~> 0.1.0'
+pod 'ISaMaterialLogIn', '~> 0.1.0'
 ```
 
 ## Author
