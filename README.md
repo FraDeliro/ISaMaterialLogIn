@@ -4,6 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/ISaMaterialLogIn.svg?style=flat)](http://cocoapods.org/pods/ISaMaterialLogIn)
 [![License](https://img.shields.io/cocoapods/l/ISaMaterialLogIn.svg?style=flat)](http://cocoapods.org/pods/ISaMaterialLogIn)
 [![Platform](https://img.shields.io/cocoapods/p/ISaMaterialLogIn.svg?style=flat)](http://cocoapods.org/pods/ISaMaterialLogIn)
+![alt tag](http://Users/Francesco/ISaMaterialLogIn/Example/ISaMaterialLogIn/ISaMaterialLogin.gif)
 
 ## Example
 

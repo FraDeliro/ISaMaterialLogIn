@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13DA4E011E00167400A0970B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA4E001E00167400A0970B /* SignUpViewController.swift */; };
+		13DA4E041E00439D00A0970B /* ISaMaterialLogin.gif in Resources */ = {isa = PBXBuildFile; fileRef = 13DA4E031E00439D00A0970B /* ISaMaterialLogin.gif */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACD81AFB9204008FA782 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* LoginViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -30,6 +32,8 @@
 /* Begin PBXFileReference section */
 		0CAE0AAEE0A8FEDD42B9B2CC /* Pods-ISaMaterialLogIn_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISaMaterialLogIn_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ISaMaterialLogIn_Tests/Pods-ISaMaterialLogIn_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		136B2C861DEC2D8500F4374D /* ISaMaterialLogIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ISaMaterialLogIn.framework; path = "../../Library/Developer/Xcode/DerivedData/ISaMaterialLogIn-ayloxhvmmkkxpqbilakuxcqzwygj/Build/Products/Debug-iphonesimulator/ISaMaterialLogIn/ISaMaterialLogIn.framework"; sourceTree = "<group>"; };
+		13DA4E001E00167400A0970B /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		13DA4E031E00439D00A0970B /* ISaMaterialLogin.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ISaMaterialLogin.gif; sourceTree = "<group>"; };
 		2A6A99D218E4059CCCDDA95A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		369B84C6B2044C65E426AB52 /* ISaMaterialLogIn.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ISaMaterialLogIn.podspec; path = ../ISaMaterialLogIn.podspec; sourceTree = "<group>"; };
 		3C98BD7F45A3DE5B5174F613 /* Pods_ISaMaterialLogIn_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ISaMaterialLogIn_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,7 +41,7 @@
 		607FACD01AFB9204008FA782 /* ISaMaterialLogIn_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISaMaterialLogIn_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -70,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13DA4E021E00439100A0970B /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				13DA4E031E00439D00A0970B /* ISaMaterialLogin.gif */,
+			);
+			name = Gif;
+			sourceTree = "<group>";
+		};
 		470D92F5A5F2C83ABC5F7E71 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,10 +118,12 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				607FACD71AFB9204008FA782 /* LoginViewController.swift */,
+				13DA4E001E00167400A0970B /* SignUpViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				13DA4E021E00439100A0970B /* Gif */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for ISaMaterialLogIn";
@@ -253,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				13DA4E041E00439D00A0970B /* ISaMaterialLogin.gif in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -365,7 +380,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				13DA4E011E00167400A0970B /* SignUpViewController.swift in Sources */,
+				607FACD81AFB9204008FA782 /* LoginViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -487,7 +503,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -503,6 +519,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NQU669U9J9;
 				INFOPLIST_FILE = ISaMaterialLogIn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -519,6 +536,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NQU669U9J9;
 				INFOPLIST_FILE = ISaMaterialLogIn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";

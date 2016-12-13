@@ -4,32 +4,31 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ISaLogInController" customModule="ISaMaterialLogIn" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ISaSignUpViewController" customModule="ISaMaterialLogIn" customModuleProvider="target">
             <connections>
-                <outlet property="isaBottomLoginButtonConstraint" destination="Ayb-Fi-67e" id="fmn-a7-shH"/>
-                <outlet property="isaLoginButton" destination="Pgi-ko-XZG" id="OeJ-6w-qKc"/>
-                <outlet property="showSignUpButton" destination="Feo-uX-Dji" id="HQJ-JI-gQA"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="widthButtonConstraint" destination="tQG-Mb-k0g" id="ndX-6s-bQw"/>
+                <outlet property="isaBottomSignUpButtonConstraint" destination="SIv-tL-Rqu" id="drJ-gf-y3i"/>
+                <outlet property="isaDismissSignUpButton" destination="eZW-10-ldP" id="nCV-ET-PRx"/>
+                <outlet property="isaSignUpButton" destination="WZR-bE-uhI" id="DPc-Ly-7Aa"/>
+                <outlet property="view" destination="i3A-RM-J7n" id="9IL-ZK-7qI"/>
+                <outlet property="widthButtonConstraint" destination="LID-rZ-be1" id="h2J-Lq-xfC"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i3A-RM-J7n">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgi-ko-XZG" customClass="RaisedButton" customModule="Material">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZR-bE-uhI" customClass="RaisedButton" customModule="Material">
                     <rect key="frame" x="67" y="567" width="240" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="FrD-Nc-g3S"/>
-                        <constraint firstAttribute="width" constant="240" id="tQG-Mb-k0g"/>
+                        <constraint firstAttribute="width" constant="240" id="LID-rZ-be1"/>
+                        <constraint firstAttribute="height" constant="40" id="goV-g1-xX1"/>
                     </constraints>
-                    <state key="normal" title="Login">
+                    <state key="normal" title="Signup">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
@@ -69,32 +68,44 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Feo-uX-Dji">
-                    <rect key="frame" x="67" y="617" width="240" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZW-10-ldP">
+                    <rect key="frame" x="321" y="609" width="38" height="38"/>
+                    <color key="backgroundColor" red="0.1764705882" green="0.2666666667" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="240" id="XWJ-Ex-igJ"/>
-                        <constraint firstAttribute="height" constant="30" id="rsy-hF-x9A"/>
+                        <constraint firstAttribute="width" constant="38" id="ZeB-9l-iac"/>
+                        <constraint firstAttribute="height" constant="38" id="lIL-wh-4wc"/>
                     </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <state key="normal">
-                        <attributedString key="attributedTitle">
-                            <fragment content="You don't have an Account?">
-                                <attributes>
-                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                    <integer key="NSUnderline" value="1"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
-                    </state>
+                    <state key="normal" title="Back"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="zPosition">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="position">
+                            <point key="value" x="1" y="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="19"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="dismissSignUp" destination="-1" eventType="touchUpInside" id="1vh-HR-P4Q"/>
+                    </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.1764705882" green="0.2666666667" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Pgi-ko-XZG" secondAttribute="bottom" constant="60" id="Ayb-Fi-67e"/>
-                <constraint firstItem="Pgi-ko-XZG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Cnp-YF-Pgd"/>
-                <constraint firstAttribute="bottom" secondItem="Feo-uX-Dji" secondAttribute="bottom" constant="20" id="L4i-Dq-ONc"/>
-                <constraint firstItem="Feo-uX-Dji" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZBj-13-aKJ"/>
+                <constraint firstItem="WZR-bE-uhI" firstAttribute="centerX" secondItem="i3A-RM-J7n" secondAttribute="centerX" id="Ac1-Dj-HPR"/>
+                <constraint firstAttribute="bottom" secondItem="WZR-bE-uhI" secondAttribute="bottom" constant="60" id="SIv-tL-Rqu"/>
+                <constraint firstAttribute="trailing" secondItem="eZW-10-ldP" secondAttribute="trailing" constant="16" id="Sw4-wy-tCJ"/>
+                <constraint firstAttribute="bottom" secondItem="eZW-10-ldP" secondAttribute="bottom" constant="20" id="y6U-gw-76H"/>
             </constraints>
             <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>

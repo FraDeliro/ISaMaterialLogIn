@@ -1,28 +1,28 @@
 //
-//  ISaLogInController.swift
+//  ISaSignUpViewController.swift
 //  Pods
 //
-//  Created by Francesco on 28/11/16.
+//  Created by Francesco on 13/12/16.
 //
 //
 
 import UIKit
 
-open class ISaLogInController: UIViewController {
-    private let NibName: String = "ISaLogInController"
-
+open class ISaSignUpViewController: UIViewController {
+    private let NibName: String = "ISaSignUpViewController"
+    
     @IBOutlet var widthButtonConstraint: NSLayoutConstraint!
-    @IBOutlet public var isaBottomLoginButtonConstraint: NSLayoutConstraint!
-    @IBOutlet weak public var isaLoginButton : UIButton!
-    @IBOutlet weak public var showSignUpButton : UIButton!
+    @IBOutlet public var isaBottomSignUpButtonConstraint: NSLayoutConstraint!
+    @IBOutlet weak public var isaSignUpButton : UIButton!
+    @IBOutlet weak public var isaDismissSignUpButton : UIButton!
     
     var transition: ISaMaterialTransition = ISaMaterialTransition(viewAnimated: UIView())
     public var dynamicViewsHeightAnchor: CGFloat = 0
     public var dynamicViewsWidthAnchor: CGFloat = 0
-    public var loginTitleHeightAnchor: CGFloat = 0
-    public var loginTitleWidthAnchor: CGFloat = 0
-    public var loginTitleTopAnchor: CGFloat = 0
-    public var loginButtonTitle: String = "Login"
+    public var signUpTitleHeightAnchor: CGFloat = 0
+    public var signUpTitleWidthAnchor: CGFloat = 0
+    public var signUpTitleTopAnchor: CGFloat = 0
+    public var signUpButtonTitle: String = "Signup"
     private var isaCircleView: ISaCircleLoader?
     
     /**
@@ -46,20 +46,20 @@ open class ISaLogInController: UIViewController {
     public init() {
         super.init(nibName: nil, bundle: nil)
     }
-
+    
     //MARK: - Page lifecycle
     open override func viewDidLoad() {
         super.viewDidLoad()
-      // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.
         self.loadViewFromNib()
-        self.isaLoginButton.setTitle(loginButtonTitle, for: .normal)
-        let gestureRecognizer : UITapGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(ISaLogInController.dismissKeyboard))
+        self.isaSignUpButton.setTitle(signUpButtonTitle, for: .normal)
+        let gestureRecognizer : UITapGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(ISaSignUpViewController.dismissKeyboard))
         self.view.addGestureRecognizer(gestureRecognizer)
     }
-
+    
     open override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        let animatedView = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width/2) - (self.isaLoginButton.frame.size.height/2) , y: self.isaLoginButton.frame.origin.y, width: self.isaLoginButton.frame.size.height, height: self.isaLoginButton.frame.size.height))
+        let animatedView = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width/2) - (self.isaSignUpButton.frame.size.height/2) , y: self.isaSignUpButton.frame.origin.y, width: self.isaSignUpButton.frame.size.height, height: self.isaSignUpButton.frame.size.height))
         animatedView.backgroundColor = UIColor.white
         animatedView.alpha = 0.0
         animatedView.layer.cornerRadius = 22.0
@@ -67,23 +67,23 @@ open class ISaLogInController: UIViewController {
         transition = ISaMaterialTransition(viewAnimated: animatedView)
     }
     
+    private func loadViewFromNib() {
+        self.view = Bundle.init(for: ISaSignUpViewController.self).loadNibNamed(NibName, owner: self, options: nil)?[0] as? UIView
+    }
+    
     @objc private func dismissKeyboard() {
         self.view.endEditing(true)
     }
     
-    private func loadViewFromNib() {
-        self.view = Bundle.init(for: ISaLogInController.self).loadNibNamed(NibName, owner: self, options: nil)?[0] as? UIView
-    }
-
     // MARK: - Actions
-    public func isaStartLoginAnimation(_ sender: Any) {
+    public func isaStartSignUpAnimation(_ sender: Any) {
         UIView.animate(withDuration: 0.1, delay: 0.5, options: [.curveLinear], animations: {
-            self.isaLoginButton.setTitle("", for: .normal)
-            self.isaLoginButton.transform = .init(scaleX: 0.1, y: 1.0)
+            self.isaSignUpButton.setTitle("", for: .normal)
+            self.isaSignUpButton.transform = .init(scaleX: 0.1, y: 1.0)
         }) { (completion) in
             //start loading view
-            self.isaLoginButton.alpha = 0.0
-            self.isaCircleView = ISaCircleLoader(frame: CGRect(x: (UIScreen.main.bounds.width/2) - (self.isaLoginButton.frame.size.height/2) , y: self.isaLoginButton.frame.origin.y, width: self.isaLoginButton.frame.size.height, height: self.isaLoginButton.frame.size.height))
+            self.isaSignUpButton.alpha = 0.0
+            self.isaCircleView = ISaCircleLoader(frame: CGRect(x: (UIScreen.main.bounds.width/2) - (self.isaSignUpButton.frame.size.height/2) , y: self.isaSignUpButton.frame.origin.y, width: self.isaSignUpButton.frame.size.height, height: self.isaSignUpButton.frame.size.height))
             self.view.addSubview(self.isaCircleView!)
         }
     }
@@ -98,25 +98,25 @@ open class ISaLogInController: UIViewController {
     }
     
     //MARK: - Custom Accessors
-    public func isaLoginSuccessfully(showNew controller: UIViewController) {
+    public func isaSignUpSuccessfully(showNew controller: UIViewController) {
         controller.modalPresentationStyle = .custom
         controller.transitioningDelegate = transition
         self.present(controller, animated: true, completion: nil)
     }
     
-    public func isaLoginError() {
+    public func isaSignUpError() {
         UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveLinear], animations: {
             self.isaCircleView?.removeFromSuperview()
             self.isaCircleView = nil
         }) { (completion) in
-            self.isaLoginButton.transform = .identity
-            self.isaLoginButton.alpha = 1.0
-            self.isaLoginButton.setTitle(self.loginButtonTitle, for: .normal)
+            self.isaSignUpButton.transform = .identity
+            self.isaSignUpButton.alpha = 1.0
+            self.isaSignUpButton.setTitle(self.signUpButtonTitle, for: .normal)
         }
     }
     
     @available(iOS 9.0, *)
-    public func setLoginViews(views: [UIView], inStackView stackView: UIStackView) {
+    public func setSignUpViews(views: [UIView], inStackView stackView: UIStackView) {
         for view in views {
             view.heightAnchor.constraint(equalToConstant: dynamicViewsHeightAnchor).isActive = true
             view.widthAnchor.constraint(equalToConstant: dynamicViewsWidthAnchor).isActive = true
@@ -132,10 +132,10 @@ open class ISaLogInController: UIViewController {
     }
     
     @available(iOS 9.0, *)
-    public func setLoginTitle(views: [UIView], inStackView stackView: UIStackView) {
+    public func setSignUpTitle(views: [UIView], inStackView stackView: UIStackView) {
         for view in views {
-            view.heightAnchor.constraint(equalToConstant: loginTitleHeightAnchor).isActive = true
-            view.widthAnchor.constraint(equalToConstant: loginTitleWidthAnchor).isActive = true
+            view.heightAnchor.constraint(equalToConstant: signUpTitleHeightAnchor).isActive = true
+            view.widthAnchor.constraint(equalToConstant: signUpTitleWidthAnchor).isActive = true
             stackView.addArrangedSubview(view)
         }
         stackView.backgroundColor = UIColor.white
@@ -143,13 +143,13 @@ open class ISaLogInController: UIViewController {
         self.view.addSubview(stackView)
         
         //Constraints
-        stackView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: loginTitleTopAnchor).isActive = true
+        stackView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: signUpTitleTopAnchor).isActive = true
         stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
     }
     
-    public func showSignUp(controller: UIViewController) {
-        controller.modalPresentationStyle = .custom
-        controller.transitioningDelegate = transition
-        self.present(controller, animated: true, completion: nil)
+    // MARK: - IBActions
+    
+    @IBAction func dismissSignUp() {
+      self.dismiss(animated: true, completion: nil)
     }
 }
