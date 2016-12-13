@@ -1,9 +1,4 @@
 # ISaMaterialLogIn
-
-[![CI Status](http://img.shields.io/travis/FraDeliro/ISaMaterialLogIn.svg?style=flat)](https://travis-ci.org/FraDeliro/ISaMaterialLogIn)
-[![Version](https://img.shields.io/cocoapods/v/ISaMaterialLogIn.svg?style=flat)](http://cocoapods.org/pods/ISaMaterialLogIn)
-[![License](https://img.shields.io/cocoapods/l/ISaMaterialLogIn.svg?style=flat)](http://cocoapods.org/pods/ISaMaterialLogIn)
-[![Platform](https://img.shields.io/cocoapods/p/ISaMaterialLogIn.svg?style=flat)](http://cocoapods.org/pods/ISaMaterialLogIn)
 ![Alt text](/Example/ISaMaterialLogIn/ISaMaterialLogin.gif?raw=true)
 
 ## Example
@@ -24,7 +19,7 @@ ISaMaterialLogIn is available through [CocoaPods](http://cocoapods.org). To inst
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "ISaMaterialLogIn"
+pod "ISaMaterialLogIn", '~> 0.1.0'
 ```
 
 ## Author

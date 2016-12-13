@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131B6B611E0062E80016D16A /* ISaMaterialLogin.gif in Resources */ = {isa = PBXBuildFile; fileRef = 131B6B601E0062E80016D16A /* ISaMaterialLogin.gif */; };
 		13DA4E011E00167400A0970B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA4E001E00167400A0970B /* SignUpViewController.swift */; };
-		13DA4E041E00439D00A0970B /* ISaMaterialLogin.gif in Resources */ = {isa = PBXBuildFile; fileRef = 13DA4E031E00439D00A0970B /* ISaMaterialLogin.gif */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* LoginViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -31,9 +31,9 @@
 
 /* Begin PBXFileReference section */
 		0CAE0AAEE0A8FEDD42B9B2CC /* Pods-ISaMaterialLogIn_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISaMaterialLogIn_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ISaMaterialLogIn_Tests/Pods-ISaMaterialLogIn_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		131B6B601E0062E80016D16A /* ISaMaterialLogin.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ISaMaterialLogin.gif; sourceTree = "<group>"; };
 		136B2C861DEC2D8500F4374D /* ISaMaterialLogIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ISaMaterialLogIn.framework; path = "../../Library/Developer/Xcode/DerivedData/ISaMaterialLogIn-ayloxhvmmkkxpqbilakuxcqzwygj/Build/Products/Debug-iphonesimulator/ISaMaterialLogIn/ISaMaterialLogIn.framework"; sourceTree = "<group>"; };
 		13DA4E001E00167400A0970B /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		13DA4E031E00439D00A0970B /* ISaMaterialLogin.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ISaMaterialLogin.gif; sourceTree = "<group>"; };
 		2A6A99D218E4059CCCDDA95A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		369B84C6B2044C65E426AB52 /* ISaMaterialLogIn.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ISaMaterialLogIn.podspec; path = ../ISaMaterialLogIn.podspec; sourceTree = "<group>"; };
 		3C98BD7F45A3DE5B5174F613 /* Pods_ISaMaterialLogIn_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ISaMaterialLogIn_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,7 +77,7 @@
 		13DA4E021E00439100A0970B /* Gif */ = {
 			isa = PBXGroup;
 			children = (
-				13DA4E031E00439D00A0970B /* ISaMaterialLogin.gif */,
+				131B6B601E0062E80016D16A /* ISaMaterialLogin.gif */,
 			);
 			name = Gif;
 			sourceTree = "<group>";
@@ -267,7 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
-				13DA4E041E00439D00A0970B /* ISaMaterialLogin.gif in Resources */,
+				131B6B611E0062E80016D16A /* ISaMaterialLogin.gif in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
