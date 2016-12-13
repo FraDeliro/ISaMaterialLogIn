@@ -4,13 +4,18 @@
 [![Version](https://img.shields.io/cocoapods/v/ISaMaterialLogIn.svg?style=flat)](http://cocoapods.org/pods/ISaMaterialLogIn)
 [![License](https://img.shields.io/cocoapods/l/ISaMaterialLogIn.svg?style=flat)](http://cocoapods.org/pods/ISaMaterialLogIn)
 [![Platform](https://img.shields.io/cocoapods/p/ISaMaterialLogIn.svg?style=flat)](http://cocoapods.org/pods/ISaMaterialLogIn)
-![alt tag](http://ISaMaterialLogIn/Example/ISaMaterialLogIn/ISaMaterialLogin.gif)
+![alt tag](https://imgflip.com/gif/1fvyuj)
 
 ## Example
-
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+###Purpose
+A Login/SignUp ViewController, coded in Swift3 with Material Design animations and error handling. 
+
+_Remark: This is my first iOS plugin project on github, please accept my apologize if any bad coding._
+
 ## Requirements
+iOS 9+
 You need to add CosmicMind/Material library: https://github.com/CosmicMind/Material
 
 ## Installation
