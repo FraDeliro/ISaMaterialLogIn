@@ -4,7 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/ISaMaterialLogIn.svg?style=flat)](http://cocoapods.org/pods/ISaMaterialLogIn)
 [![License](https://img.shields.io/cocoapods/l/ISaMaterialLogIn.svg?style=flat)](http://cocoapods.org/pods/ISaMaterialLogIn)
 [![Platform](https://img.shields.io/cocoapods/p/ISaMaterialLogIn.svg?style=flat)](http://cocoapods.org/pods/ISaMaterialLogIn)
-[![Alt text](ISaMaterialLogIn/Example/ISaMaterialLogIn/ISaMaterialLogin.gif?raw=true)]
+![Alt text](/Users/Francesco/ISaMaterialLogIn/Example/ISaMaterialLogIn/ISaMaterialLogin.gif?raw=true)
 
 ## Example
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
