@@ -2,6 +2,7 @@
 
 ![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)
 ![Platforms](https://img.shields.io/badge/Platform-iOS-blue.svg)
+![Language](https://img.shields.io/badge/Language-Swift%203-orange.svg)
 [![Cocoapod Latest Version](https://img.shields.io/badge/Version-0.1.0-brightgreen.svg)](https://cocoapods.org/?q=ISaMaterialLogIn)
 
 ![Alt text](/Example/ISaMaterialLogIn/ISaMaterialLogin.gif?raw=true)
@@ -10,7 +11,8 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ###Purpose
-A Login/SignUp ViewController, coded in Swift3 with Material Design animations and error handling. 
+A Login/SignUp ViewController, coded in Swift3 with Material Design animations and error handling.
+ 
 _Remark: This is my first iOS plugin project on github, please accept my apologize if any bad coding._
 
 ## Requirements
