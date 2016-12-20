@@ -1,5 +1,5 @@
 # ISaMaterialLogIn
-
+![Build](https://travis-ci.org/FraDeliro/ISaMaterialLogIn.svg?branch=master)
 ![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)
 ![Platforms](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)
 ![Language](https://img.shields.io/badge/Language-Swift%203-orange.svg)
