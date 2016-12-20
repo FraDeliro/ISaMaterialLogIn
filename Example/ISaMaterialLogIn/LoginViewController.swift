@@ -13,7 +13,7 @@ import Material
 class LoginViewController: ISaLogInController {
     
     //MARK: - Outlets & Variables
-     var textFieldsArray = [UITextField]()
+     var textFieldsArray = [ErrorTextField]()
     
     //MARK: - Page lifecycle
     override func viewDidLoad() {
@@ -23,7 +23,7 @@ class LoginViewController: ISaLogInController {
         if #available(iOS 9.0, *) {
             self.dynamicViewsWidthAnchor = 200
             self.dynamicViewsHeightAnchor = 30
-            textFieldsArray = [self.baseTextField(placeholder: "Name"), self.baseTextField(placeholder: "Surname")]
+            textFieldsArray = [self.baseTextField(placeholder: "Name",errorMessage: "Name field cannot be empty!"), self.baseTextField(placeholder: "Surname", errorMessage:"Surname field cannot be empty!")]
             self.setLoginSignUpViews(views: textFieldsArray, inStackView: self.loginStackView())
             self.viewTitleTopAnchor = 100
             self.viewTitleWidthAnchor = 300
@@ -35,6 +35,7 @@ class LoginViewController: ISaLogInController {
         
         self.isaLoginButton.addTarget(self, action: #selector(LoginViewController.logInAction), for: .touchUpInside)
         self.showSignUpButton.addTarget(self, action: #selector(LoginViewController.presentSignUpController), for: .touchUpInside)
+        self.dismissKeyboardOnTap = true
     }
     
     override func viewDidLayoutSubviews() {
@@ -48,19 +49,25 @@ class LoginViewController: ISaLogInController {
         stackView.axis  = UILayoutConstraintAxis.vertical
         stackView.distribution  = UIStackViewDistribution.equalSpacing
         stackView.alignment = UIStackViewAlignment.center
-        stackView.spacing   = 10.0
+        stackView.spacing   = 50.0
         return stackView
     }
     
-    func baseTextField(placeholder: String) -> UITextField{
-        let textField = UITextField()
-        textField.backgroundColor = Color.white
+    func baseTextField(placeholder: String, errorMessage: String) -> ErrorTextField {
+        let textField = ErrorTextField()
+        textField.errorMessage = errorMessage
+        textField.backgroundColor = Color.clear
         textField.placeholder = placeholder
-        textField.placeHolderColor = Color.deepOrange.base
-        textField.tintColor = Color.deepOrange.base
-        textField.textColor = Color.deepOrange.base
-        textField.textAlignment = .center
-        textField.borderStyle = .roundedRect
+        textField.placeholderActiveColor = Color.white
+        textField.placeholderNormalColor = Color.white
+        textField.dividerActiveColor = Color.white
+        textField.dividerNormalColor = Color.white
+        textField.detailColor = Color.red.accent2
+        textField.textColor = Color.white
+        textField.isClearIconButtonEnabled = true
+        textField.textAlignment = .left
+        textField.borderStyle = .none
+        textField.spellCheckingType = .no
         return textField
     }
     

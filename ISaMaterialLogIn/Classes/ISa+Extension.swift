@@ -39,6 +39,11 @@ extension UIViewController {
 }
 
 public extension UITextField {
+    private struct ErrorString {
+        static var errorMessage: String?
+    }
+    
+    
     @IBInspectable var placeHolderColor: UIColor? {
         get {
             return self.placeHolderColor
@@ -47,4 +52,16 @@ public extension UITextField {
             self.attributedPlaceholder = NSAttributedString(string:self.placeholder != nil ? self.placeholder! : "", attributes:[NSForegroundColorAttributeName: newValue!])
         }
     }
+    
+    var errorMessage: String? {
+        get {
+            return objc_getAssociatedObject(self, &ErrorString.errorMessage) as? String
+        }
+        set {
+            if let unwrappedValue = newValue {
+                objc_setAssociatedObject(self, &ErrorString.errorMessage, unwrappedValue as String?, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            }
+        }
+    }
 }
+

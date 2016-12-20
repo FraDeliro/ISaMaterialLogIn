@@ -13,7 +13,7 @@ import Material
 class SignUpViewController: ISaSignUpViewController {
 
     //MARK: - Outlets & Variables
-    var textFieldsArray = [UITextField]()
+    var textFieldsArray = [ErrorTextField]()
     
     //MARK: - Page lifecycle
     override func viewDidLoad() {
@@ -34,6 +34,7 @@ class SignUpViewController: ISaSignUpViewController {
         }
         
         self.isaSignUpButton.addTarget(self, action: #selector(SignUpViewController.signUpAction), for: .touchUpInside)
+        self.dismissKeyboardOnTap = true
     }
     
     override func viewDidLayoutSubviews() {
@@ -51,8 +52,8 @@ class SignUpViewController: ISaSignUpViewController {
         return stackView
     }
     
-    func baseTextField(placeholder: String) -> UITextField{
-        let textField = UITextField()
+    func baseTextField(placeholder: String) -> ErrorTextField {
+        let textField = ErrorTextField()
         textField.backgroundColor = Color.white
         textField.placeholder = placeholder
         textField.placeHolderColor = Color.green.darken3

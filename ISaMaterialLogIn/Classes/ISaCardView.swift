@@ -13,27 +13,27 @@ import UIKit
 public class ISaCardView: UIView {
     
     //MARK: - Outlets & Variables
-    @IBInspectable var cornerRadius: CGFloat = 0 {
+    @IBInspectable override public var cornerRadius: CGFloat {
         didSet {
             layer.cornerRadius = cornerRadius
         }
     }
-    @IBInspectable var shadowRadius: CGFloat = 0 {
+    @IBInspectable override public var shadowRadius: CGFloat {
         didSet {
             layer.shadowRadius = shadowRadius
         }
     }
-    @IBInspectable var shadowColor: UIColor? = UIColor.black {
+    @IBInspectable override public var shadowColor: UIColor? {
         didSet {
             layer.shadowColor = shadowColor?.cgColor
         }
     }
-    @IBInspectable var shadowOpacity: Float = 0.5 {
+    @IBInspectable override public var shadowOpacity: Float {
         didSet {
             layer.shadowOpacity = shadowOpacity
         }
     }
-    @IBInspectable var shadowOffsetSize: CGSize = CGSize(width: 2, height: 1) {
+    @IBInspectable public var shadowOffsetSize: CGSize = CGSize(width: 2, height: 1) {
         didSet {
             layer.shadowOffset = shadowOffsetSize
         }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Material
 
 open class ISaModelViewController: UIViewController {
     
@@ -36,11 +37,14 @@ open class ISaModelViewController: UIViewController {
     public var signUpButtonTitle: String = "Signup"
     
     //MARK: - Page lifecycle
-    override open func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    open override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         if self.dismissKeyboardOnTap {
-            self.isaSignUpButton.setTitle(signUpButtonTitle, for: .normal)
             let gestureRecognizer : UITapGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(ISaModelViewController.dismissKeyboard))
             self.view.addGestureRecognizer(gestureRecognizer)
         }
@@ -109,9 +113,16 @@ open class ISaModelViewController: UIViewController {
         }
     }
     
-    public func checkEmptyData(fields: [UITextField], error: NSError) throws {
+    public func checkEmptyData(fields: [ErrorTextField], error: NSError) throws {
+        fields.forEach { (field) in
+            field.isErrorRevealed = true
+            field.detail = field.errorMessage
+        }
+        
         for field in fields {
             guard field.text?.isEmpty == true else {
+                field.isErrorRevealed = false
+                field.detail = ""
                 continue
             }
             throw error

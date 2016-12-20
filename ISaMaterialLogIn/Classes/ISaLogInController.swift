@@ -37,7 +37,6 @@ open class ISaLogInController: ISaModelViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         self.loadViewFromNib(NibName, controllerClass: ISaLogInController.self)
-        
         // Do any additional setup after loading the view.
         self.isaLoginButton.setTitle(loginButtonTitle, for: .normal)
         //check if it's needed to dismiss the keyboard
