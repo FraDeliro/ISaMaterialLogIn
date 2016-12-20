@@ -4,10 +4,11 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - ISaMaterialLogIn (0.1.0)
-  - Material (2.4.0):
-    - Material/Core (= 2.4.0)
-  - Material/Core (2.4.0)
+  - ISaMaterialLogIn (0.1.0):
+    - Material (~> 2.0)
+  - Material (2.4.1):
+    - Material/Core (= 2.4.1)
+  - Material/Core (2.4.1)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (= 2.1.4)
@@ -20,8 +21,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  ISaMaterialLogIn: b0d458ed67f95e04d7d72aa1b28a08cee9cc4739
-  Material: a366cee7e9f7bee5e55ff6a2afe91fcb91514b95
+  ISaMaterialLogIn: c2ebb816a9490a10a6c165b0291138069a0744aa
+  Material: bdf4386e3600537077c2667764292f8dd581e541
 
 PODFILE CHECKSUM: a7764ea8d00f6cdbb8653b6195a54cc009154bc5
 

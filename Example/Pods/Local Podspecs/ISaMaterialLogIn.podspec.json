@@ -1,8 +1,7 @@
 {
   "name": "ISaMaterialLogIn",
   "version": "0.1.0",
-  "summary": "A Login/SignUp ViewController, coded in Swift3 with Material Design animations and error handling.",
-  "description": "ISaMaterialLogIn + CosmicMind/Material is a Material Design Login/Signup ViewController for iOS created with CosmicMind/Material library: https://github.com/CosmicMind/Material.",
+  "summary": "A Login/SignUp ViewController with Material Design animations and error handling!",
   "homepage": "https://github.com/FraDeliro/ISaMaterialLogIn",
   "license": {
     "type": "MIT",
@@ -15,8 +14,14 @@
     "git": "https://github.com/FraDeliro/ISaMaterialLogIn.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/FDeliro",
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "ISaMaterialLogIn/Classes/**/*"
+  "source_files": "ISaMaterialLogIn/Classes/**/*",
+  "dependencies": {
+    "Material": [
+      "~> 2.0"
+    ]
+  }
 }

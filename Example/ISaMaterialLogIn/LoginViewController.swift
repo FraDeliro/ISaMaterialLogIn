@@ -24,11 +24,11 @@ class LoginViewController: ISaLogInController {
             self.dynamicViewsWidthAnchor = 200
             self.dynamicViewsHeightAnchor = 30
             textFieldsArray = [self.baseTextField(placeholder: "Name"), self.baseTextField(placeholder: "Surname")]
-            self.setLoginViews(views: textFieldsArray, inStackView: self.loginStackView())
-            self.loginTitleTopAnchor = 100
-            self.loginTitleWidthAnchor = 300
-            self.loginTitleHeightAnchor = 70
-            self.setLoginTitle(views: [self.titleLoginLabel()], inStackView: self.loginStackView())
+            self.setLoginSignUpViews(views: textFieldsArray, inStackView: self.loginStackView())
+            self.viewTitleTopAnchor = 100
+            self.viewTitleWidthAnchor = 300
+            self.viewTitleHeightAnchor = 70
+            self.setLoginSignUpViewControllerTitle(views: [self.titleLoginLabel()], inStackView: self.loginStackView())
         } else {
             // Fallback on earlier versions
         }
@@ -76,7 +76,7 @@ class LoginViewController: ISaLogInController {
 
     //MARK: - Actions
     func logInAction() {
-        self.isaStartLoginAnimation(self)
+        self.startLoginAnimation()
         self.perform(#selector(LoginViewController.checkFieldsEmpty), with: self, afterDelay: 2.0)
     }
     
@@ -92,21 +92,11 @@ class LoginViewController: ISaLogInController {
             successLabel.numberOfLines = 0
             successLabel.textAlignment = .center
             home.view.addSubview(successLabel)
-            self.isaLoginSuccessfully(showNew: home)
+            self.isaLoginSignUpSuccessfully(showNew: home)
         } catch let error as NSError {
             print(error)
-            self.isaLoginError()
-            self.showErrorAlert(error.localizedDescription)
-        }
-    }
-    
-    func showErrorAlert(_ message: String) {
-        let alertController = UIAlertController(title: "ISA MATERIAL LOGIN\r", message: message, preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
-        }
-        alertController.addAction(cancelAction)
-        if self.presentedViewController != alertController {
-            self.present(alertController, animated: true, completion: nil)
+            self.isaLoginSignUpError(self.isaLoginButton, oldTitle: "Login")
+            Commons.shared.showErrorAlert(error.localizedDescription, onController: self)
         }
     }
     

@@ -30,7 +30,7 @@
 
 import UIKit
 
-public struct CollectionDataSourceItem {
+public struct CollectionViewDataSourceItem {
 	/// Stores an the data for the item.
 	public var data: Any?
 	
