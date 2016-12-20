@@ -1,9 +1,9 @@
 # ISaMaterialLogIn
 
 ![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)
-![Platforms](https://img.shields.io/badge/Platform-iOS-blue.svg)
+![Platforms](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)
 ![Language](https://img.shields.io/badge/Language-Swift%203-orange.svg)
-[![Cocoapod Latest Version](https://img.shields.io/badge/Version-0.1.0-brightgreen.svg)](https://cocoapods.org/?q=ISaMaterialLogIn)
+[![Cocoapod Latest Version](https://img.shields.io/badge/Version-0.1.0-blue.svg)](https://cocoapods.org/?q=ISaMaterialLogIn)
 
 ![Alt text](/Example/ISaMaterialLogIn/ISaMaterialLogin.gif?raw=true)
 
