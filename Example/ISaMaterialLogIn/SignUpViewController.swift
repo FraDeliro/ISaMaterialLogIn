@@ -37,6 +37,7 @@ class SignUpViewController: ISaSignUpViewController, UITextFieldDelegate {
             // Fallback on earlier versions
         }
         
+        self.isaDismissSignUpButton.setImage(Icon.cm.close, for: .normal)
         self.isaSignUpButton.addTarget(self, action: #selector(SignUpViewController.signUpAction), for: .touchUpInside)
         self.dismissKeyboardOnTap = true
     }

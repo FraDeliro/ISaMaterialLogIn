@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,6 +26,44 @@
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7t-jC-jmM">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZW-10-ldP" customClass="IconButton" customModule="Material">
+                            <rect key="frame" x="314" y="54" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="tq5-Da-1QV"/>
+                                <constraint firstAttribute="height" constant="30" id="vRM-nO-MFm"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" image="cm_close_white"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="zPosition">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="point" keyPath="position">
+                                    <point key="value" x="1" y="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="pulseOpacity">
+                                    <real key="value" value="0.80000000000000004"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="cm_close_white"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="dismissSignUp" destination="-1" eventType="touchUpInside" id="1vh-HR-P4Q"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="eZW-10-ldP" firstAttribute="top" secondItem="V7t-jC-jmM" secondAttribute="topMargin" constant="46" id="M61-W1-NIC"/>
+                        <constraint firstItem="eZW-10-ldP" firstAttribute="trailing" secondItem="V7t-jC-jmM" secondAttribute="trailingMargin" constant="-23" id="PU5-x8-80Z"/>
+                        <constraint firstItem="eZW-10-ldP" firstAttribute="leading" secondItem="V7t-jC-jmM" secondAttribute="leading" constant="314" id="Tsg-HB-UQQ"/>
+                        <constraint firstAttribute="bottom" secondItem="eZW-10-ldP" secondAttribute="bottom" constant="583" id="pVd-Ym-ija"/>
+                    </constraints>
                 </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZR-bE-uhI" customClass="RaisedButton" customModule="Material">
                     <rect key="frame" x="67" y="567" width="240" height="40"/>
@@ -72,37 +111,6 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZW-10-ldP">
-                    <rect key="frame" x="321" y="609" width="38" height="38"/>
-                    <color key="backgroundColor" red="0.1764705882" green="0.2666666667" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="38" id="ZeB-9l-iac"/>
-                        <constraint firstAttribute="height" constant="38" id="lIL-wh-4wc"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <state key="normal" title="Back"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="zPosition">
-                            <real key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="point" keyPath="position">
-                            <point key="value" x="1" y="1"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="19"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                            <real key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="dismissSignUp" destination="-1" eventType="touchUpInside" id="1vh-HR-P4Q"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -110,12 +118,14 @@
                 <constraint firstItem="WZR-bE-uhI" firstAttribute="centerX" secondItem="i3A-RM-J7n" secondAttribute="centerX" id="Ac1-Dj-HPR"/>
                 <constraint firstItem="V7t-jC-jmM" firstAttribute="top" secondItem="i3A-RM-J7n" secondAttribute="top" id="KTT-wO-qRo"/>
                 <constraint firstAttribute="bottom" secondItem="WZR-bE-uhI" secondAttribute="bottom" constant="60" id="SIv-tL-Rqu"/>
-                <constraint firstAttribute="trailing" secondItem="eZW-10-ldP" secondAttribute="trailing" constant="16" id="Sw4-wy-tCJ"/>
                 <constraint firstAttribute="trailing" secondItem="V7t-jC-jmM" secondAttribute="trailing" id="ZAG-ex-tTH"/>
                 <constraint firstAttribute="bottom" secondItem="V7t-jC-jmM" secondAttribute="bottom" id="lbv-0I-Ovl"/>
-                <constraint firstAttribute="bottom" secondItem="eZW-10-ldP" secondAttribute="bottom" constant="20" id="y6U-gw-76H"/>
             </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
             <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="cm_close_white" width="24" height="24"/>
+    </resources>
 </document>
