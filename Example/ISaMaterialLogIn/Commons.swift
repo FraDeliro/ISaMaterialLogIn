@@ -12,6 +12,7 @@ import UIKit
 class Commons: NSObject {
     static let shared = Commons()
     
+    
     override init() {
         super.init()
     }

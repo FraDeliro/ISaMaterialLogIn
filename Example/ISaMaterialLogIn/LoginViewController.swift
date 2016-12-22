@@ -10,7 +10,7 @@ import UIKit
 import ISaMaterialLogIn
 import Material
 
-class LoginViewController: ISaLogInController {
+class LoginViewController: ISaLogInController, UITextFieldDelegate {
     
     //MARK: - Outlets & Variables
      var textFieldsArray = [ErrorTextField]()
@@ -19,16 +19,21 @@ class LoginViewController: ISaLogInController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //register for keyboard notification
+        self.registerForKeyboardNotifications()
+        self.scrollView = self.isaScrollView
+       
         //Stack View
         if #available(iOS 9.0, *) {
             self.dynamicViewsWidthAnchor = 200
             self.dynamicViewsHeightAnchor = 30
             textFieldsArray = [self.baseTextField(placeholder: "Name",errorMessage: "Name field cannot be empty!"), self.baseTextField(placeholder: "Surname", errorMessage:"Surname field cannot be empty!")]
             self.setLoginSignUpViews(views: textFieldsArray, inStackView: self.loginStackView())
-            self.viewTitleTopAnchor = 100
+            //set title constraints
+            self.viewTitleTopAnchor = 65
             self.viewTitleWidthAnchor = 300
-            self.viewTitleHeightAnchor = 70
-            self.setLoginSignUpViewControllerTitle(views: [self.titleLoginLabel()], inStackView: self.loginStackView())
+            self.viewTitleHeightAnchor = 50
+            self.setLoginSignUpViewControllerTitle(views: [self.titleLoginImageView(),self.titleLoginLabel()], inStackView: self.loginStackView())
         } else {
             // Fallback on earlier versions
         }
@@ -40,7 +45,20 @@ class LoginViewController: ISaLogInController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        //self.isaBottomLoginButtonConstraint.constant = 200
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.deregisterFromKeyboardNotifications()
+    }
+    
+    //MARK: - TextField Delegate
+    func textFieldDidBeginEditing(_ textField: UITextField){
+        self.activeField = textField
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField){
+        self.activeField = nil
     }
     
     //MARK: - Custom Accessors
@@ -50,11 +68,13 @@ class LoginViewController: ISaLogInController {
         stackView.distribution  = UIStackViewDistribution.equalSpacing
         stackView.alignment = UIStackViewAlignment.center
         stackView.spacing   = 50.0
-        return stackView
+        self.stackView = stackView
+        return self.stackView!
     }
     
     func baseTextField(placeholder: String, errorMessage: String) -> ErrorTextField {
         let textField = ErrorTextField()
+        textField.delegate = self
         textField.errorMessage = errorMessage
         textField.backgroundColor = Color.clear
         textField.placeholder = placeholder
@@ -67,7 +87,6 @@ class LoginViewController: ISaLogInController {
         textField.isClearIconButtonEnabled = true
         textField.textAlignment = .left
         textField.borderStyle = .none
-        textField.spellCheckingType = .no
         return textField
     }
     
@@ -79,6 +98,13 @@ class LoginViewController: ISaLogInController {
         titleLabel.text = "ISA MATERIAL LOGIN"
         titleLabel.textAlignment = .center
         return titleLabel
+    }
+    
+    func titleLoginImageView() -> UIImageView {
+        let titleView = UIImageView()
+        titleView.contentMode = .scaleAspectFit
+        titleView.image = #imageLiteral(resourceName: "appleWhite")
+        return titleView
     }
 
     //MARK: - Actions

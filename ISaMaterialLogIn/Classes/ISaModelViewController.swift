@@ -23,6 +23,7 @@ open class ISaModelViewController: UIViewController {
     public var viewTitleWidthAnchor: CGFloat = 0
     public var viewTitleTopAnchor: CGFloat = 0
     @IBOutlet var widthButtonConstraint: NSLayoutConstraint!
+    @IBOutlet weak public var isaScrollView : UIScrollView!
     
     // Login
     @IBOutlet public var isaBottomLoginButtonConstraint: NSLayoutConstraint!
@@ -35,6 +36,7 @@ open class ISaModelViewController: UIViewController {
     @IBOutlet weak public var isaSignUpButton : UIButton!
     @IBOutlet weak public var isaDismissSignUpButton : UIButton!
     public var signUpButtonTitle: String = "Signup"
+    
     
     //MARK: - Page lifecycle
     open override func viewDidLoad() {
@@ -64,7 +66,11 @@ open class ISaModelViewController: UIViewController {
         }
         stackView.backgroundColor = UIColor.white
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(stackView)
+        if let scrollView = self.scrollView {
+            scrollView.addSubview(stackView)
+        } else {
+            self.view.addSubview(stackView)
+        }
         
         //Constraints
         stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
@@ -80,7 +86,11 @@ open class ISaModelViewController: UIViewController {
         }
         stackView.backgroundColor = UIColor.white
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(stackView)
+        if let scrollView = self.scrollView {
+            scrollView.addSubview(stackView)
+        } else {
+            self.view.addSubview(stackView)
+        }
         
         //Constraints
         stackView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: viewTitleTopAnchor).isActive = true
